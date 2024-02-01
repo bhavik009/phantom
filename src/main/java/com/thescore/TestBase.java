@@ -3,7 +3,6 @@ package com.thescore;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 
 import java.net.MalformedURLException;
@@ -11,6 +10,7 @@ import java.net.URL;
 
 public class TestBase {
     protected AndroidDriver driver;
+
     @BeforeClass
     public void setUp() throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
