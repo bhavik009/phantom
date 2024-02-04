@@ -1,0 +1,22 @@
+{
+  "android": {
+    "landingScreen": {
+      "accessibilityID": {
+        "getStartedBtn": "com.fivemobile.thescore:id/btn_primary"
+      },
+      "id": {
+        "getStartedBtn": "com.fivemobile.thescore:id/btn_primary"
+      },
+      "xpath": {
+      }
+    }
+  },
+  "ios": {
+    "accessibilityID": {
+    },
+    "id": {
+    },
+    "xpath": {
+    }
+  }
+}

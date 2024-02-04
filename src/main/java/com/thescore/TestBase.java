@@ -17,12 +17,13 @@ public class TestBase {
         desiredCapabilities.setCapability("appium:deviceName", "Bhavik's S23");
         desiredCapabilities.setCapability("platformName", "Android");
         desiredCapabilities.setCapability("appium:automationName", "UIAutomator2");
-        desiredCapabilities.setCapability("appium:app", "src\\main\\resources\\app\\thescore.apk");
+        desiredCapabilities.setCapability("appium:app", "C:\\Users\\gandh\\LetsCode\\phantom\\src\\main\\resources\\app\\thescore.apk");
         desiredCapabilities.setCapability("appium:ensureWebviewsHavePages", true);
         desiredCapabilities.setCapability("appium:nativeWebScreenshot", true);
         desiredCapabilities.setCapability("appium:newCommandTimeout", 3600);
+        desiredCapabilities.setCapability("autoGrantPermissions", "true");
 
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), desiredCapabilities);
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), desiredCapabilities);
     }
 
     @AfterClass
