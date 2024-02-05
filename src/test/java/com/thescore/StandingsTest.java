@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class StandingsTest extends TestBase {
 
-
     @Test
     public void landingTest() {
         LandingScreen landingScreen = new LandingScreen(driver);
@@ -17,10 +16,10 @@ public class StandingsTest extends TestBase {
         Assert.assertEquals(leagueSelectionScreen.getLeagueSelectionTitle().getText(), "Choose your favorite leagues");
     }
 
-    //    @Test
+    @Test
     public void leagueSelectionTest() {
         LeagueSelectionScreen leagueSelectionScreen = new LeagueSelectionScreen(driver);
-        leagueSelectionScreen.nbaBasketBall().click();
+        leagueSelectionScreen.selectLeague("nbaBasketBall");
     }
 
 }

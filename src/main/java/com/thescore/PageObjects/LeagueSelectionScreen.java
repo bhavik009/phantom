@@ -12,6 +12,11 @@ public class LeagueSelectionScreen extends BasePage {
         return getElement("leagueSelectionScreen", "leagueSelectionTitle");
     }
 
+    public void selectLeague(String leagueName)
+    {
+        getElement("leagueSelectionScreen", leagueName).click();
+    }
+
     public LeagueSelectionScreen(AppiumDriver driver) {
         super(driver);
     }

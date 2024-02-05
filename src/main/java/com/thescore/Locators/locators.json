@@ -13,10 +13,39 @@
     "leagueSelectionScreen": {
       "accessibilityID": {},
       "id": {
-        "leagueSelectionTitle": "com.fivemobile.thescore:id/title_onboarding"
+        "leagueSelectionTitle": "com.fivemobile.thescore:id/title_onboarding",
+        "continueBtn": "com.fivemobile.thescore:id/action_button_text"
       },
       "xpath": {
         "nbaBasketBall": "//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/txt_name\" and @text=\"NBA Basketball\"]"
+      }
+    },
+    "teamSelectionScreen": {
+      "accessibilityID": {},
+      "id": {
+        "teamSelectionTitle": "com.fivemobile.thescore:id/title_onboarding",
+        "continueBtn": "com.fivemobile.thescore:id/action_button_text"
+      },
+      "xpath": {
+        "torontoRaptors": "//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/txt_name\" and @text=\"Toronto Raptors\"]"
+      }
+    },
+    "notificationSelectionScreen": {
+      "accessibilityID": {},
+      "id": {
+        "notificationSelectionTitle": "com.fivemobile.thescore:id/title_onboarding",
+        "doneBtn": "com.fivemobile.thescore:id/action_button_text"
+      },
+      "xpath": {
+      }
+    },
+    "homeScreen": {
+      "accessibilityID": {},
+      "id": {
+        "promotionBannerTitle": "com.fivemobile.thescore:id/sportsbook_logo",
+        "dismissBtn": "com.fivemobile.thescore:id/dismiss_modal"
+      },
+      "xpath": {
       }
     }
   },

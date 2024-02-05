@@ -25,31 +25,7 @@ public class BasePage {
     public static By getSelector(String screenName, String elementName) {
         System.out.println("Screen Name: " + screenName);
         System.out.println("Element Name: " + elementName);
-/*
-        String locatorValue = null;
 
-        try {
-            locatorValue = locators
-                    .getAsJsonObject("android")
-                    .getAsJsonObject(screenName)
-                    .getAsJsonObject("accessibilityID")
-                    .get(elementName)
-                    .getAsString();
-        } catch (NullPointerException ignored) {
-
-        }
-
-        if (locatorValue != null)
-            return By.id(locatorValue);
-        else if (locators.getAsJsonObject("android").getAsJsonObject(screenName).getAsJsonObject("accessibilityID").get(elementName) != null) {
-            locatorValue = locators.getAsJsonObject("android").getAsJsonObject(screenName).getAsJsonObject("id").get(elementName).getAsString();
-            return By.id(locatorValue);
-        } else {
-            locatorValue = locators.getAsJsonObject("android").getAsJsonObject(screenName).getAsJsonObject("xpath").get(elementName).getAsString();
-            return By.xpath(locatorValue);
-        }
-
- */
         String locatorValue = getLocatorValue(screenName, elementName, "accessibilityID");
         if(locatorValue != null)
             return By.id(locatorValue);
