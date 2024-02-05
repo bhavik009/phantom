@@ -53,12 +53,14 @@ public class StandingsTest extends TestBase {
         LeagueScreen leagueScreen = new LeagueScreen(driver);
         Assert.assertEquals(leagueScreen.getLeagueTitle().getText(), "NBA");
     }
+
     @Test(priority = 5)
     public void verifyStandings() {
         LeagueScreen leagueScreen = new LeagueScreen(driver);
         leagueScreen.getStandingsTab().click();
         Assert.assertEquals(leagueScreen.getRaptorsStanding().getText(), "TOR Raptors");
     }
+
     @Test(priority = 6)
     public void navigateBack() {
         LeagueScreen leagueScreen = new LeagueScreen(driver);

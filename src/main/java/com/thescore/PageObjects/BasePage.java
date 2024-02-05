@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.github.cdimascio.dotenv.Dotenv;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,8 @@ import java.io.FileReader;
 import java.time.Duration;
 
 public class BasePage {
+    static Dotenv dotenv = Dotenv.load();
+
     protected static AppiumDriver driver;
     private static JsonObject locators;
 
@@ -45,7 +48,7 @@ public class BasePage {
         String locatorValue = null;
         try {
             locatorValue = locators
-                    .getAsJsonObject("android")
+                    .getAsJsonObject(dotenv.get("platform"))
                     .getAsJsonObject(screenName)
                     .getAsJsonObject(locatorType)
                     .get(elementName)
@@ -77,7 +80,7 @@ public class BasePage {
         driver.perform(ImmutableList.of(sequence));
     }
 
-    public static void navigateBack(){
+    public static void navigateBack() {
         driver.navigate().back();
     }
 }
