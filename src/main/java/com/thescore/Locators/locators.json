@@ -2,21 +2,32 @@
   "android": {
     "landingScreen": {
       "accessibilityID": {
-        "getStartedBtn": "com.fivemobile.thescore:id/btn_primary"
+        "getStartedBtn": "com.fivemobile.thescore:id/btn_primary",
+        "loginBtn": ""
       },
       "id": {
-        "getStartedBtn": "com.fivemobile.thescore:id/btn_primary"
       },
       "xpath": {
+      }
+    },
+    "leagueSelectionScreen": {
+      "accessibilityID": {},
+      "id": {
+        "leagueSelectionTitle": "com.fivemobile.thescore:id/title_onboarding"
+      },
+      "xpath": {
+        "nbaBasketBall": "//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/txt_name\" and @text=\"NBA Basketball\"]"
       }
     }
   },
   "ios": {
-    "accessibilityID": {
-    },
-    "id": {
-    },
-    "xpath": {
+    "landingScreen": {
+      "accessibilityID": {
+      },
+      "id": {
+      },
+      "xpath": {
+      }
     }
   }
 }

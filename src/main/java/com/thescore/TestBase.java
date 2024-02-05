@@ -1,12 +1,16 @@
 package com.thescore;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 public class TestBase {
     protected AndroidDriver driver;
@@ -29,5 +33,16 @@ public class TestBase {
     @AfterClass
     public void tearDown() {
         driver.quit();
+    }
+
+    private WebDriverWait getWait(long seconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+        wait.ignoring(NoSuchElementException.class);
+        wait.ignoring(StaleElementReferenceException.class);
+        return wait;
+    }
+
+    public void implicitWait() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 }

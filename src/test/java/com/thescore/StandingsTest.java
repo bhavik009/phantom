@@ -1,21 +1,26 @@
 package com.thescore;
 
 import com.thescore.PageObjects.LandingScreen;
+import com.thescore.PageObjects.LeagueSelectionScreen;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.io.IOException;
 
 public class StandingsTest extends TestBase {
 
+
     @Test
-    public void sampleTest() throws InterruptedException, IOException {
-
+    public void landingTest() {
         LandingScreen landingScreen = new LandingScreen(driver);
+        LeagueSelectionScreen leagueSelectionScreen = new LeagueSelectionScreen(driver);
+        landingScreen.getStartedBtn().click();
+        implicitWait();
+        Assert.assertEquals(leagueSelectionScreen.getLeagueSelectionTitle().getText(), "Choose your favorite leagues");
+    }
 
-//        driver.findElement(By.id("com.fivemobile.thescore:id/btn_primary")).click();
-        landingScreen.getStartedBtn.click();
-
-        Thread.sleep(3000);
+    //    @Test
+    public void leagueSelectionTest() {
+        LeagueSelectionScreen leagueSelectionScreen = new LeagueSelectionScreen(driver);
+        leagueSelectionScreen.nbaBasketBall().click();
     }
 
 }
