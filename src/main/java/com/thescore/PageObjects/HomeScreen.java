@@ -13,6 +13,12 @@ public class HomeScreen extends BasePage {
         return getElement("homeScreen", "dismissBtn");
     }
 
+    public WebElement getFavLeague(){
+        return getElement("homeScreen", "favLeague");
+    }
+    public WebElement getSearchBar(){
+        return getElement("homeScreen", "searchBar");
+    }
     public HomeScreen(AppiumDriver driver) {
         super(driver);
     }

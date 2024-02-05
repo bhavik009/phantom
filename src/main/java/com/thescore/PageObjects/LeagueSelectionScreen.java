@@ -11,6 +11,9 @@ public class LeagueSelectionScreen extends BasePage {
     public WebElement getLeagueSelectionTitle() {
         return getElement("leagueSelectionScreen", "leagueSelectionTitle");
     }
+    public WebElement getContinueBtn() {
+        return getElement("leagueSelectionScreen", "continueBtn");
+    }
 
     public void selectLeague(String leagueName)
     {

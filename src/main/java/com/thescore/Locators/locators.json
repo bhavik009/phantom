@@ -2,10 +2,10 @@
   "android": {
     "landingScreen": {
       "accessibilityID": {
-        "getStartedBtn": "com.fivemobile.thescore:id/btn_primary",
-        "loginBtn": ""
       },
       "id": {
+        "getStartedBtn": "com.fivemobile.thescore:id/btn_primary",
+        "loginBtn": ""
       },
       "xpath": {
       }
@@ -43,9 +43,23 @@
       "accessibilityID": {},
       "id": {
         "promotionBannerTitle": "com.fivemobile.thescore:id/sportsbook_logo",
-        "dismissBtn": "com.fivemobile.thescore:id/dismiss_modal"
+        "dismissBtn": "com.fivemobile.thescore:id/dismiss_modal",
+        "searchBar": "com.fivemobile.thescore:id/search_bar_text_view"
       },
       "xpath": {
+        "favLeague": "(//android.widget.ImageView[@resource-id=\"com.fivemobile.thescore:id/icon\"])[2]"
+      }
+    },
+    "leagueScreen": {
+      "accessibilityID": {
+        "backBtn": "Navigate up"
+      },
+      "id": {
+        "leagueTitle": "com.fivemobile.thescore:id/titleTextView"
+      },
+      "xpath": {
+        "standingsTab": "//android.widget.TextView[@text=\"STANDINGS\" and @class=\"android.widget.TextView\"]",
+        "standingsTorRaptors": "//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/txt_name\" and @text=\"TOR Raptors\"]"
       }
     }
   },
